@@ -1,0 +1,17 @@
+[package]
+name = "stackrun"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "stackrun"
+path = "src/main.rs"
+
+[dependencies]
+portable-pty = "0.9"
+vt100 = "0.16.2"
+crossterm = "0.29"
+anyhow = "1"
+
+[profile.release]
+lto = "thin"
